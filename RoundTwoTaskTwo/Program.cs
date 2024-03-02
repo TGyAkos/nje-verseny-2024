@@ -11,11 +11,18 @@ class Program
     static void Main(string[] args)
     {
         string[][] jatszmak = readParseFile();
-        //aFeladat();
+        Console.Write("A. ");
+        aFeladat();
+        Console.Write("B. ");
         new BFeladat(jatszmak);
-        //cFeladat();
+        Console.Write("C. ");
+        cFeladat();
+        Console.WriteLine("");
+        Console.Write("D. ");
         new DFeladat(jatszmak);
-        //eFeladat();
+        Console.Write("E. ");
+        eFeladat();
+        Console.Write("F. ");
         new FFeladat(jatszmak);
         // Console.ReadLine();
     }
@@ -38,7 +45,7 @@ class Program
 
         List<string> jatszmak = new List<string>();
         string line = "";
-        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../../jatszmak.txt");
+        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../jatszmak.txt");
         line = sr.ReadLine();
         while (line != null)
         {
@@ -50,7 +57,7 @@ class Program
         string winners = "";
         foreach(string row in jatszmak)
         {
-            string[] moves = jatszmak[items].Split("/");
+            string[] moves = jatszmak[items].Split("\t");
             int won = moves.Length;
             if (won % 2 == 0)
             {
@@ -62,14 +69,13 @@ class Program
             items++;
         }
         Console.WriteLine(winners);
-        Console.ReadLine();
     }
     static void cFeladat()
     {
 
         List<string> jatszmak = new List<string>();
         string line = "";
-        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../../jatszmak.txt");
+        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../jatszmak.txt");
         line = sr.ReadLine();
         while (line != null)
         {
@@ -84,7 +90,7 @@ class Program
         List<int> thegame = new List<int>();
         foreach (string row in jatszmak)
         {
-            string[] moves = jatszmak[items].Split("/");
+            string[] moves = jatszmak[items].Split("\t");
             items++;
             for (int j = 0; j < moves.Length; j++)
             {
@@ -133,17 +139,16 @@ class Program
         for(int j = 0; thegame.Count() > j; j++)
         {
             if (!alreadyindcluded.Contains(thegame[j]))
-                Console.Write(thegame[j] + " ");
+                Console.Write(thegame[j] + ";");
             alreadyindcluded[j] = thegame[j];
 
         }
-        Console.ReadLine();
     }
     static void eFeladat()
     {
         List<string> jatszmak = new List<string>();
         string line = "";
-        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../../jatszmak.txt");
+        StreamReader sr = new StreamReader(Directory.GetCurrentDirectory() + "/../../../jatszmak.txt");
         line = sr.ReadLine();
         while (line != null)
         {
@@ -157,7 +162,7 @@ class Program
         foreach (string row in jatszmak)
         {
             bool movedOrNO = false;
-            string[] moves = jatszmak[items].Split("/");
+            string[] moves = jatszmak[items].Split("\t");
             items++;
             foreach(string move in moves)
             {

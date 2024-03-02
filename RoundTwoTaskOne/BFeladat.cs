@@ -2,12 +2,12 @@
 
 public class BFeladat
 {
-    private string _kezdoSzam;
+    private string _kezdoSzam = "";
 
     public BFeladat()
     {
         generateAndCompareNumber();
-        Console.WriteLine($"A kezdo szam: {_kezdoSzam}");
+        Console.WriteLine($"B. A kezdo szam: {_kezdoSzam}");
     }
     
     private void generateAndCompareNumber()
@@ -17,7 +17,7 @@ public class BFeladat
             string szam = i.ToString();
             for (int j = 1; j <= 30; j++)
             {
-                if (szam.Contains("216816212162121681684816816"))
+                if ((szam.Length > 27 && szam.Substring(szam.Length - 27) == "216816212162121681684816816"))
                 {
                     _kezdoSzam = i.ToString();
                     return;

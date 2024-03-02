@@ -8,7 +8,7 @@ public class CFeladat
     {
         _szam = "11";
         generateNumber();
-        Console.WriteLine($"A 31. elem: {_szam}");
+        Console.WriteLine($"C. A 31. elem: {_szam}");
     }
     
     private void generateNumber()
