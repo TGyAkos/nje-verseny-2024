@@ -30,7 +30,7 @@ public class EFeladat
             orderby count descending
             select new { Value = g.Key, Count = count });
 
-        result = query.Where(x => x.Count > 5).Select(x => x.Value).ToArray();
+        result = query.Where(x => x.Count >= 5).Select(x => x.Value).ToArray();
         Array.Sort(result);
     }
 
