@@ -24,7 +24,7 @@ public class DFeladat
             else data[wordToNumber(line)].Add(line);
         }
         
-        result = data.MaxBy(x => x.Value.Count).Value.Count;
+        result = data.MaxBy(x => x.Value.Count).Key;
     }
     
     int wordToNumber(string c)
