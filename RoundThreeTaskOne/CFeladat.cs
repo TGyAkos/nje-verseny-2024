@@ -9,7 +9,8 @@ public class CFeladat
         "7610922751913275142233435073915524642160008422684973049146293643594970710907471138712178244571230807";
     Dictionary<string, int> incorrectChars = new();
     Dictionary<string, int> correctNumberOfChars = new();
-    int[] mostIncorrect = [0, 0];
+    Dictionary<string, double> incorrectCharsPercent = new();
+    double[] mostIncorrect = [0, 0];
 
     
     public CFeladat(string[] lines)
@@ -38,22 +39,22 @@ public class CFeladat
                 }
             }
         }
-
-        foreach (var incorrectChar in incorrectChars)
-        {
-            if (incorrectChar.Value > mostIncorrect[1])
-            {
-                mostIncorrect[0] = Convert.ToInt32(incorrectChar.Key);
-                mostIncorrect[1] = incorrectChar.Value;
-            }
-        }
         
         foreach (var correctNumberOfChar in correctNumberOfChars)
         {
-            if (mostIncorrect[0].ToString() == correctNumberOfChar.Key)
+            incorrectCharsPercent[correctNumberOfChar.Key] = (double)incorrectChars[correctNumberOfChar.Key] / (double)(correctNumberOfChar.Value * 500) ;
+        }
+
+        foreach (var incorrectCharPercent in incorrectCharsPercent)
+        {
+            if (incorrectCharPercent.Value > mostIncorrect[1])
             {
-                resultC[mostIncorrect[0].ToString()] = (double)mostIncorrect[1] / (double)(correctNumberOfChar.Value * 500) ;
+                mostIncorrect[0] = Convert.ToDouble(incorrectCharPercent.Key);
+                mostIncorrect[1] = incorrectCharPercent.Value;
             }
         }
+        
+        resultC.Add(mostIncorrect[0].ToString(), mostIncorrect[1]);
+
     }
 }
