@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundThreeTaskOne", "RoundThreeTaskOne\RoundThreeTaskOne.csproj", "{590DDA10-1F37-4EB9-BDFD-36D7CFB4B9FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoundThreeTaskTwo", "RoundThreeTaskTwo\RoundThreeTaskTwo.csproj", "{5693DC67-C0B9-40E1-97E6-14EA7D3EBA5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{590DDA10-1F37-4EB9-BDFD-36D7CFB4B9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590DDA10-1F37-4EB9-BDFD-36D7CFB4B9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590DDA10-1F37-4EB9-BDFD-36D7CFB4B9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590DDA10-1F37-4EB9-BDFD-36D7CFB4B9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5693DC67-C0B9-40E1-97E6-14EA7D3EBA5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5693DC67-C0B9-40E1-97E6-14EA7D3EBA5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5693DC67-C0B9-40E1-97E6-14EA7D3EBA5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5693DC67-C0B9-40E1-97E6-14EA7D3EBA5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
